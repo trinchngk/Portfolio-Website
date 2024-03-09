@@ -22,30 +22,36 @@ body{
 }
 .container{
     padding: 10px 10%;
+    /* optional */
+    padding-right: 10px 10%;
 }
 nav{
-    display: flex;
-    align-items: center;
+    display:flow-root;
+    align-items:center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .logo{
-    width: 140px;
+    width: 200px;
 }
 
 /* menu */
 nav ul li{
-    display: inline-block;
-    list-style; none;
-    margin: 10px 20px;
+    /* display: inline-block; */
+    display:flow-root;
+    list-style: none;
+    /* margin-top: 1000px;
+    margin-bottom: 5px; 
+    margin-right: 50%;  */
+    margin: 30px 10px;
 }
 
 nav ul li a{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    position: relative;
+    position:relative;
 }
 
 /* underline seletion */
@@ -66,7 +72,7 @@ nav ul li a:hover::after{
 
 .header-text{
     color: #ff004f;
-    margin-top: 20%;
+    margin-bottom: 0%;
     font-size: 30px;
 }
 
