@@ -53,6 +53,7 @@
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>Bensley Design Studio</span><br> - Utilized SketchUp and Photoshop to construct elevation section scale models for client reference.
+                        <li><span>Bensley Design Studio: May 2021 - Aug 2021</span><br> - Utilized SketchUp and Photoshop to construct elevation section scale models for client reference.
                         </span><br> - Pitched design for restaurant interior at the Le Meridian Hotel Beijing, diagrammed layout for 
                         </span><br>     apartment complex on Dorado Beach, Puerto Rico.</li>
 
@@ -76,6 +77,16 @@
                         <li><span>Tufts University Undergraduate Class of 2026</span><br> - Current Sophomore pursuing a B.S. in Computer Science
                         </span><br> - Major: Computer Science</span><br> - GPA: 3.55, Dean's List</span><br> - Related Coursework: Introduction to Computer Science, 
                                 Discrete Mathematics, Data Structures, Machine Structure and Programming</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="leadership">
+                    <ul>
+                        <li><span>Tufts' Thai Students' Association President
+
+                        </span><br> - Leader of the organization representing 
+                        Tufts' Thai Society, hosting a variety of regular cultural events and
+                        E-board meetings.</span><br> - Coordinated club events, 
+                        managed social media page, and delegated tasks to E-Board members.</li>
                     </ul>
                 </div>
             </div>
@@ -162,12 +173,13 @@
                 <a href="images/Pasith Changkasiri Resume.docx.pdf" download class="button button2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="button button2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -195,4 +207,22 @@
 </script>
 
 </body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxXwszDQNhuxzOmo7wEPGY0xQmYcTFhTj8_E8synV1_tGKZgHBexZgR93JN1ellyibD_w/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = " "
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </html>
