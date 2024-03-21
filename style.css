@@ -321,7 +321,7 @@ nav ul li a:hover::after{
 } */
 
 /* --------portfolio: button animation---------- */
- .button{
+.button{
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -330,11 +330,13 @@ nav ul li a:hover::after{
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
-    transition: background 0.5s;
+    /* transition: background 0.5s; */
 }
-.button:hover{
+/* .button:hover{
     background: #009dff;
-} 
+}  */
+
+
 
 
 
