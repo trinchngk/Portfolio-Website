@@ -56,13 +56,24 @@ nav ul li a{
 
 /* underline seletion */
 nav ul li a::after{
-    content: '';
+    /* content: '';
     width: 0%;
     height: 3px;
     background: #009dff;
     position: absolute;
     left: 0;
     bottom: -6px;
+    transition: 0.5s; */
+
+    content: attr(data-contents);
+    width: 0;
+    /* height: 3px; */
+    color: #009dff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* bottom: -8px; */
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -80,6 +91,29 @@ nav ul li a:hover::after{
     color: #009dff;
     font-size: 60px;
     margin-top: 20px;
+}
+
+@keyframes fade {
+    /* from {
+        transform: translateX(1200px);
+    }
+
+    to {
+        transform: translateX(0px);
+    } */
+
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+}
+
+.largeheader {
+    animation: fade 2s ease-in;
+    padding: 10px 10%;
+    /* optional */
+    /* color: #009dff; */
+    font-size: 60px;
+    margin-top: 20px;
+    text-align:right;
 }
 
 /* --------!!!about!!!---------- */
@@ -123,13 +157,15 @@ nav ul li a:hover::after{
 }
 
 .tab-links::after{
-    content: '';
+    content: attr(data-content);
     width: 0;
-    height: 3px;
-    background: #009dff;
+    /* height: 3px; */
+    color: #009dff;
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: -8px;
+    /* bottom: -8px; */
+    overflow: hidden;
     transition: 0.5s;
 }
 
