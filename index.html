@@ -17,11 +17,11 @@
         </nav>
         <nav>
             <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a data-contents="Home" href="#header">Home</a></li>
+                <li><a data-contents="About" href="#about">About</a></li>
                 <!-- <li><a href="#services">Services</a></li>
                 <li><a href="#services">Portfolio</a></li> -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a data-contents="Contact" href="#contact">Contact</a></li>
             </ul>
 
 
@@ -31,11 +31,15 @@
             <h1>Bangkok, Thailand</h1>
         </div> -->
 
+
+
     </div>
 
-
+        <h1 class="largeheader">Undergraduate Student at <span style="color:#009dff">Tufts University</span></h1>
     
 </div>
+
+
 
 <!-- --------about---------- -->
 
@@ -50,10 +54,13 @@
                 <p>20 year old college Sophomore, looking to explore careers in the fields of Computer Science, 
                     working and learning from others while building critical problem-solving skills and experience.</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
+                    
+                    <!-- find more modular method of highlighting -->
+                    <p class="tab-links active-link" data-content="Skills" onclick="opentab('skills')">Skills</p>
+                    <!-- <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> -->
+                    <p class="tab-links" data-content="Experience" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" data-content="Education" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" data-content="Leadership" onclick="opentab('leadership')">Leadership</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -170,7 +177,7 @@
                 </div>
 
 <!--------update resume file-------->
-                <a href="images/Pasith Changkasiri Resume.docx.pdf" download class="button button2">Download Resume</a>
+                <a href="images/Pasith Changkasiri Resume.docx.pdf" download class="button button2">My Resume</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
