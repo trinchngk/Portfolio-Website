@@ -222,56 +222,119 @@ nav ul li a {
 
 /* --------!!!services!!!---------- */
 
-/*
-#services{
-    padding: 30px 0;
+
+#interests{
+    margin: 0px 0px 10px;
 }
 
-.services-list{
+.interests-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 
 }
-*/
 
 /* --------contact: block styling---------- */
-/* .services-list div{
-    background: #262626;
+
+
+.interest-container {
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    border: 2px solid #3D8A44;
+    margin: 10px;
+    padding: 50px;
+    background: #fff;
+    color: #3D8A44;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+.interest-container:hover {
+    transform: scale(1.02);
+    background-color: #61b752;
+    color: #fff;
+    cursor: pointer;
 }
 
-.services-list div h2{
+.interest-container h2 {
+    padding-top: 40px;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-} */
+}
 
-/* --------services: block text---------- */
-/* .services-list div a{
+.interest-container a {
     text-decoration: none;
-    color: #fff;
+    color: inherit;
     font-size: 12px; 
     margin-top: 20px;
     display: inline-block;
-} */
+    transition: color 0.3s ease;
+}
+
+.interest-container:hover a {
+    color: #fff;
+}
+
+.mainContainer {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+@keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite;
+  }
+  
 
 
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem; 
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;    
+}
+
+.front {
+    background-image: url('https://thebluecrown.com/cdn/shop/products/back_3_1024x1024_db84a16d-8f9a-4829-a5d7-257f01f5b672_2048x.png?v=1441133537');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.5) contrast(1);
+}
+
+.back {
+    background-image: url('https://playingcards.wdfiles.com/local--files/bicycle/Bicycle%20Ace.jpg');
+    background-size: 102%;
+    background-position: left;
+    filter: brightness(1) contrast(1);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* --------!!!portfolio!!!---------- */
-/* #portfolio{
+/* #interests{
     padding: 50px 0;
-} */
+}  */
 
 /* --------portfolio: block dimensions---------- */
 /* .work-list{
@@ -442,6 +505,31 @@ form .button2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+
+
+
+.slick-prev:before, .slick-next:before {
+    color: #000;
+}
+
+.video-carousel {
+    width: 100%;
+    max-width: 800px; /* Adjust this value as needed */
+    margin: 0 auto;
+}
+
+.carousel-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 
