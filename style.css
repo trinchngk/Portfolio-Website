@@ -11,24 +11,19 @@ html{
 body{
     background: #fff;
     color: #3D8A44;
-    /* color: #009dff; */
     
 }
 /* background image*/
-/* #header{
-    width: 100%;
-    height: 100vh;
-    background: #fff;
+body{
+    /* background-image: url('images/IMG_3377.JPG'); */
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center;
-
-} */
+}
 .container{
-    /* padding: 50px 10%;
-    padding-right: 10px 10%; */
 
     border: 2px solid #3D8A44;
-    /* border-radius: 10px; */
     margin: 10px;
     padding: 50px;
     background: #fff;
@@ -53,6 +48,7 @@ nav ul {
     display: flex;
     width: 100%;
     border: 2px solid #3D8A44;
+    background: #fff;
 }
 
 nav ul li {
@@ -105,9 +101,7 @@ nav ul li a {
 }
 
 .largeheader {
-    border: 2px solid #3D8A44;
-    padding: 10%;
-    margin: 10px;
+    padding: 7%;
     animation: fade 2s ease-in;
     font-size: 80px;
     text-align: left;
@@ -215,10 +209,6 @@ nav ul li a {
 .tab-contents.active-tab{
     display: block;
 }
-
-
-
-
 
 /* --------!!!services!!!---------- */
 
@@ -331,80 +321,6 @@ nav ul li a {
     align-items: center;
 }
 
-/* --------!!!portfolio!!!---------- */
-/* #interests{
-    padding: 50px 0;
-}  */
-
-/* --------portfolio: block dimensions---------- */
-/* .work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-} */
-
-/* --------portfolio: background image cropping---------- */
-/* .work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-} */
-/* --------portfolio: text layer---------- */
-/* .layer{
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0,0,0,0,6), #3D8A44);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a{
-    margin-top: 20px;
-    color: #3D8A44;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-} */
-
-/* --------portfolio: background image zoom---------- */
-/* .work:hover img{
-    transform: scale(1.1);
-} */
-
-/* --------portfolio: text layer animation---------- */
-/* .work:hover .layer{
-    height: 100%;
-} */
-
 /* --------portfolio: button animation---------- */
 .button{
     display: block;
@@ -420,11 +336,6 @@ nav ul li a {
 .button:hover{
     transform: scale(1.05);
 } 
-
-
-
-
-
 
 
 /* --------contact: block animation and color---------- */
@@ -491,13 +402,11 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    /* background-color: rgba(0, 255, 106, 0.2); */
     padding: 15px;
     margin: 15px 0;
     color: #3D8A44;
     font-size: 18px;
     border: 2px solid #3D8A44;
-    /* border-radius: 6px; */
 }
 
 form .button2{
@@ -640,7 +549,6 @@ form .button2{
 
 
 
-
 /* --------contact: block animation and color---------- */
 .services-list div:hover{
     background: #3D8A44;
@@ -701,13 +609,11 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    /* background-color: rgba(0, 255, 106, 0.2); */
     padding: 15px;
     margin: 15px 0;
     color: #3D8A44;
     font-size: 18px;
     border: 2px solid #3D8A44;
-    /* border-radius: 6px; */
 }
 
 form .button2{
